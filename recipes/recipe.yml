@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: ca-vault
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: This is an immutable OS designed to support offline CA activities
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
@@ -23,6 +23,10 @@ modules:
     install:
       - micro
       - starship
+      - xca
+      - opensc
+      - openssl-pkcs11
+      - pkcs11-helper
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -34,7 +38,6 @@ modules:
     system:
       # If no repo information is specified, Flathub will be used by default
       install:
-        - org.mozilla.firefox
         - org.gnome.Loupe
       remove:
         - org.gnome.eog
