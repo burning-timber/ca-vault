@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+      	<key>ifdCapabilities</key>
+        <string>IFD_GENERATE_HOTPLUG</string>
+        <!-- default is
+        <string>0x00000000</string>
+        but we want pcscd \-\-hotplug -->
+
+
+    <key>CFBundleExecutable</key>
+    <string>libifdsfc.so</string>
+
+    <key>ifdLogLevel</key>
+    <string>0x0003</string>
+
+
+    <key>ifdManufacturerString</key>
+    <string>Swissbit AG</string>
+
+    <key>ifdProductString</key>
+    <string>Driver for Secure Flash Card, version 1.0</string>
+
+    <key>ifdVendorID</key>
+    <string>0x058f</string>
+
+    <key>ifdProductID</key>
+    <string>0x6362</string>
+
+    <key>ifdFriendlyName</key>
+    <string>Alcor Micro Corp. Flash Card Reader/Writer</string>
+</dict>
+</plist>
